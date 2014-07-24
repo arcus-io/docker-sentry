@@ -113,7 +113,7 @@ SERVER_EMAIL = 'root@localhost'
 
 # If this file ever becomes compromised, it's important to regenerate your SECRET_KEY
 # Changing this value will result in all current sessions being invalidated
-SECRET_KEY = os.environ.GET('SECRET_KEY', 'CHANGE+ME+PLEASE')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'CHANGE+ME+PLEASE')
 
 # http://twitter.com/apps/new
 # It's important that input a callback URL, even if its useless. We have no idea why, consult Twitter.
