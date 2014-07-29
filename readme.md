@@ -20,3 +20,9 @@ Environment
 * `CACHE_ENDPOINT`: Memcached endpoint (i.e. 127.0.0.1:11211)
 * `SENTRY_URL`: Sentry application url
 * `SECRET_KEY`: Application secret key (make sure to set this!)
+* `EMAIL_HOST`: SMTP host
+* `EMAIL_HOST_USER`: SMTP username
+* `EMAIL_HOST_PASSWORD`: SMTP password
+* `EMAIL_PORT`: SMTP port
+* `EMAIL_USE_TLS`: Enable TLS for smtp (true/false)
+* `SERVER_EMAIL`: Email from address

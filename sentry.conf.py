@@ -98,14 +98,17 @@ SENTRY_UDP_PORT = 9001
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST = 'localhost'
-EMAIL_HOST_PASSWORD = ''
-EMAIL_HOST_USER = ''
-EMAIL_PORT = 25
-EMAIL_USE_TLS = False
+EMAIL_HOST = os.environ.get('EMAIL_HOST', 'localhost')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
+EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 25))
+if os.environ.get('EMAIL_USE_TLS', '').lower() == 'true':
+    EMAIL_USE_TLS = True
+else:
+    EMAIL_USE_TLS = False
 
 # The email address to send on behalf of
-SERVER_EMAIL = 'root@localhost'
+SERVER_EMAIL = os.environ.get('SERVER_EMAIL', 'root@localhost')
 
 ###########
 ## etc. ##
